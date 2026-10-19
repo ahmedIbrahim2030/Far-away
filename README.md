@@ -1,64 +1,80 @@
 # Far Away
 
-Far Away is a simple, responsive packing-list app for organizing the items you
-need for a trip. Add items with quantities, keep track of what is packed, and
-see your packing progress at a glance.
+A focused, responsive packing-list application built with React. **Far Away** makes trip preparation easy: add essentials, track quantities, check off packed items, organize the list, and see progress at a glance.
 
-## Features
+## Highlights
 
-- Add an item with a quantity from 1 to 20
+- Add packing items with quantities from 1 to 20
 - Mark items as packed or unpacked
-- Sort the list by entry order, item description, or packed status
-- Delete individual items or clear the entire list
-- View a summary of packed items and overall progress
-- Use the app on desktop or mobile screens
+- Sort items by creation order, name, or packing status
+- Remove a single item or clear the entire list with a confirmation prompt
+- View live packing progress and completion status
+- Use on desktop and mobile layouts
+- Navigate core controls with labeled, accessible form inputs
+
+> **Note:** The list lives in React state for the current browser session. Reloading the page restores the starter list; items are not persisted to local storage or a backend.
+
+## Tech stack
+
+- [React](https://react.dev/)
+- [Create React App](https://create-react-app.dev/)
+- Modern CSS with responsive layout rules
 
 ## Getting started
 
-### Requirements
+### Prerequisites
 
-- [Node.js](https://nodejs.org/) and npm
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm (included with Node.js)
 
-### Install and run
+### Installation
 
 ```bash
+git clone <your-repository-url>
+cd far-away
 npm install
+```
+
+### Run locally
+
+```bash
 npm start
 ```
 
-The development server opens the app at [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) in your browser. The development server reloads automatically as you edit the project.
 
 ## Available scripts
 
-| Command         | Description                                             |
-| --------------- | ------------------------------------------------------- |
-| `npm start`     | Start the development server                            |
-| `npm test`      | Run the test suite in watch mode                        |
-| `npm run build` | Create an optimized production build in `build/`        |
-| `npm run eject` | Eject the Create React App configuration (irreversible) |
+| Command | Purpose |
+| --- | --- |
+| `npm start` | Starts the local development server. |
+| `npm test` | Launches the test runner in watch mode. |
+| `npm run build` | Creates an optimized production build in `build/`. |
+| `npm run eject` | Exposes the Create React App configuration. This cannot be undone. |
 
-## How to use
+## How it works
 
-1. Choose a quantity and enter an item description.
-2. Select **Add** to put it on the packing list.
-3. Check an item when it is packed. Use the sort menu to reorganize the list.
-4. Delete individual entries or choose **Clear list** to start over.
-
-The list is held in the app's current session and is not saved between page
-reloads.
-
-## Built with
-
-- React
-- Create React App (`react-scripts`)
-- CSS
+1. Select the quantity and enter an item description.
+2. Choose **Add** to include it on the list.
+3. Tick an item when it is packed.
+4. Use the sort control to organize the list, or delete items you no longer need.
+5. Check the footer for your current packing progress.
 
 ## Project structure
 
 ```text
-src/
-  App.js       # Packing-list UI and interactions
-  index.css    # App styles and responsive layout
-  index.js     # React entry point
-public/        # Static assets and HTML template
+far-away/
+├── public/                 # HTML template and static assets
+├── src/
+│   ├── components/
+│   │   ├── App.js          # Application state and event handlers
+│   │   ├── Form.js         # Add-item form
+│   │   ├── Item.js         # Individual packing-list item
+│   │   ├── Logo.js         # Application heading
+│   │   ├── PackingList.js  # Sortable list and clear action
+│   │   └── Stats.js        # Packing-progress summary
+│   ├── index.css           # Global and responsive styles
+│   └── index.js            # React entry point
+├── package.json
+└── README.md
 ```
