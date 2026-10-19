@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Far Away
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Far Away is a simple, responsive packing-list app for organizing the items you
+need for a trip. Add items with quantities, keep track of what is packed, and
+see your packing progress at a glance.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add an item with a quantity from 1 to 20
+- Mark items as packed or unpacked
+- Sort the list by entry order, item description, or packed status
+- Delete individual items or clear the entire list
+- View a summary of packed items and overall progress
+- Use the app on desktop or mobile screens
 
-### `npm start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Requirements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) and npm
 
-### `npm test`
+### Install and run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+npm start
+```
 
-### `npm run build`
+The development server opens the app at [http://localhost:3000](http://localhost:3000).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Available scripts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Command         | Description                                             |
+| --------------- | ------------------------------------------------------- |
+| `npm start`     | Start the development server                            |
+| `npm test`      | Run the test suite in watch mode                        |
+| `npm run build` | Create an optimized production build in `build/`        |
+| `npm run eject` | Eject the Create React App configuration (irreversible) |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to use
 
-### `npm run eject`
+1. Choose a quantity and enter an item description.
+2. Select **Add** to put it on the packing list.
+3. Check an item when it is packed. Use the sort menu to reorganize the list.
+4. Delete individual entries or choose **Clear list** to start over.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The list is held in the app's current session and is not saved between page
+reloads.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Built with
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React
+- Create React App (`react-scripts`)
+- CSS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project structure
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+src/
+  App.js       # Packing-list UI and interactions
+  index.css    # App styles and responsive layout
+  index.js     # React entry point
+public/        # Static assets and HTML template
+```
